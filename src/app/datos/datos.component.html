@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <ion-card lines="full" class="ion-no-margin">
+    <ion-card-header>
+      <ion-label>Mis datos</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Nombre</ion-label>
+        <ion-input placeholder="Juanito"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Apellido</ion-label>
+        <ion-input placeholder="Perez"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Nacimiento</ion-label>
+          <ion-input type="date"></ion-input>
+      </ion-item>
+      <ion-item>
+            <ion-select interface="action-sheet" placeholder="Nivel de educacion">
+              <ion-select-option value="Basica">Basica</ion-select-option>
+              <ion-select-option value="Media">Media</ion-select-option>
+              <ion-select-option value="Tecnico">Tecnico</ion-select-option>
+              <ion-select-option value="Universitaria">Universitaria</ion-select-option>
+            </ion-select>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-button color="dark" expand="block" >Limpiar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="dark" expand="block">Mostrar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-card lines="full" class="ion-no-margin">
+    <ion-card-header>
+      <ion-label>Experiencia laboral</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Empresa</ion-label>
+        <ion-input placeholder="Duoc"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Año de inicio</ion-label>
+        <ion-datetime presentation="year"></ion-datetime>
+      </ion-item> 
+      <ion-item>
+        <ion-label position="fixed">Cargo</ion-label>
+        <ion-input placeholder="Goma"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Aun trabaja ahí</ion-label>
+        <ion-select interface="action-sheet" placeholder="Seleccione">
+          <ion-select-option value="Basica">SI</ion-select-option>
+          <ion-select-option value="Media">NO</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-button color="dark" expand="block" >Guardar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

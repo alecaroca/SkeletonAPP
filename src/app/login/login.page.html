@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>SkeletonAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form action="" [formGroup]="formulariologin">
+    <ion-card lines="full" class="ion-no-margin">
+      <ion-card-header>
+        <ion-title>Iniciar Sesion</ion-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user.usuario" formControlName="usuario" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" formControlName="password"></ion-input>
+        </ion-item>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <ion-button color="dark" shape="round" expand="block" (click)="ingresar()">Ingresar</ion-button>
+            <ion-button color="danger" shape="round" expand="block" (click)="mostrar2()">Mostrar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

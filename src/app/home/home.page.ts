@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {
+    this.router.navigate(['home/datos'])
+  }
+  segmentChanged($event){
+    console.log($event.detail.value);
+    let direction=$event.detail.value
+    this.router.navigate(['home/'+direction])
+  } 
+ 
 
 }
