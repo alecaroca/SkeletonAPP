@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators,FormBuilder } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
 
 
 @Component({
@@ -16,28 +17,34 @@ export class LoginPage implements OnInit {
   constructor(
     private router: Router, 
     public fb: FormBuilder,
-    public toastController: ToastController ) { 
+    public toastController: ToastController,
+    private storage: Storage ) { 
 
     this.formulariologin = this.fb.group({
       'usuario': new FormControl("",Validators.required),
       'password': new FormControl("",Validators.required)
 
     })
+
   }
 
   user={ 
     usuario:"",
     password:""
   }
+  
+  
   ngOnInit(){
   }
   ingresar(){
+    
 
     if(this.formulariologin.invalid){
-      this.presentToast("Ingresa usuario y password: "+ this.user);
+      this.presentToast("Ingresa tu usuario y password: ");
     }
     else{
       this.router.navigate(['/home']);
+      localStorage.setItem('usuario',JSON.stringify(this.formulariologin.value));      
     }
     
   }

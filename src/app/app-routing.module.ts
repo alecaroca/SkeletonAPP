@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { GuardGuard } from './guardian/guard.guard';
+
 
 const routes: Routes = [
   {
@@ -14,6 +16,12 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'mostrar',
+    loadChildren: () => import('./mostrar/mostrar.module').then( m => m.MostrarPageModule),
+    canActivate:[GuardGuard]
+    
   },
   {
     path: '**',

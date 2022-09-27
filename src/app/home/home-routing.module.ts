@@ -4,6 +4,7 @@ import { HomePage } from './home.page';
 import { CertificacionesComponent } from '../certificaciones/certificaciones.component';
 import { ExperienciaComponent } from '../experiencia/experiencia.component';
 import { DatosComponent } from '../datos/datos.component';
+import { GuardGuard } from '../guardian/guard.guard';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +20,7 @@ const routes: Routes = [
       },
       {
         path:'certificaciones',
-        component: CertificacionesComponent
+        component: CertificacionesComponent, canActivate:[GuardGuard]
       }
     ]
   }
