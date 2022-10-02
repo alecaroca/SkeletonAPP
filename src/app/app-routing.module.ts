@@ -19,8 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'mostrar',
-    loadChildren: () => import('./mostrar/mostrar.module').then( m => m.MostrarPageModule),
-    canActivate:[GuardGuard]
+    loadChildren: () => import('./mostrar/mostrar.module').then( m => m.MostrarPageModule)
     
   },
   {

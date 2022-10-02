@@ -1,8 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>mostrar</ion-title>
+    <ion-title>Mostrar API</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-<p>Menu mostrar</p>
+  <ion-card *ngFor="let posts of posts">
+    <ion-card-header>
+      <ion-card-subtitle>ID {{posts.id}}</ion-card-subtitle>
+      <ion-card-title>Title {{posts.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Body {{posts.body}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
