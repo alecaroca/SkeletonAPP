@@ -23,6 +23,10 @@ const routes: Routes = [
     
   },
   {
+    path: 'geo',
+    loadChildren: () => import('./geo/geo.module').then( m => m.GeoPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
   },

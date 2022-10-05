@@ -49,13 +49,16 @@ export class LoginPage implements OnInit {
     
   }
   
+
   mostrar2(): void{
     this.router.navigate(['/mostrar']);
   }
-
+  mostrar3(): void{
+    this.router.navigate(['/geo']);
+  }
 
   // mensajes toast
-  async presentToast(message:string, duration?:number){
+  async presentToast(message:string, duration?:number): Promise<void>{
     const toast = await this.toastController.create(
       {
         message:message,
