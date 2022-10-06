@@ -1,0 +1,15 @@
+#map{
+    height: 100%;
+}
+
+ion-header{
+    position: absolute;
+    text-align: center;
+}
+ion-toolbar{
+    --ion-background-color: transparent;
+    --opacity: 0;
+}
+ion-content{
+    --ion-background-color:#ffffff;  
+}
