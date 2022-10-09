@@ -4,9 +4,10 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card >
+  <ion-card lines="full" class="ion-no-margin" >
       <ion-list>
         <ion-item>
+          <ion-label>Selecciona un post</ion-label>
           <ion-select interface="action-sheet" placeholder="Select one" (ionChange)="getItem($event)" >
             <ion-select-option *ngFor="let posts of posts" value={{posts.id}}>{{posts.id}}</ion-select-option>
           </ion-select>
