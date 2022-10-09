@@ -56,6 +56,9 @@ export class LoginPage implements OnInit {
   mostrar3(): void{
     this.router.navigate(['/geo']);
   }
+  mostrar4(): void{
+    this.router.navigate(['/muestra2']);
+  }
 
   // mensajes toast
   async presentToast(message:string, duration?:number): Promise<void>{

@@ -17,9 +17,14 @@ export class ApiService {
   apiPrueba = 'https://jsonplaceholder.typicode.com';
 
   constructor( private http:HttpClient) { }
-
+  
+  //Obtiene todos los datos de la api
   obtenerPosts(): Observable<any>{
     return this.http.get(this.apiPrueba+'/posts/').pipe(retry(3))
+  }
+  //Obtiene parametros filtrado de la api, se debe pasar el id o similar
+  obtenerPostsFiltrado(id): Observable<any>{
+    return this.http.get(this.apiPrueba+'/posts/'+id).pipe(retry(3))
   }
 
 }

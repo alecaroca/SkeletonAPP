@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: () => import('./geo/geo.module').then( m => m.GeoPageModule)
   },
   {
+    path: 'muestra2',
+    loadChildren: () => import('./muestra2/muestra2.module').then( m => m.Muestra2PageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
   },

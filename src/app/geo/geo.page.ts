@@ -10,10 +10,11 @@ declare var google: any;
   styleUrls: ['./geo.page.scss'],
 })
 export class GeoPage  {
-
+  //variable mapa
   map: any;
   //variable para recoger la geolocalizacion
   xy: any;
+  //variable para el marcador
   marker:any;
   @ViewChild('map',{read: ElementRef, static: false}) mapRef: ElementRef;  
 
@@ -36,12 +37,12 @@ export class GeoPage  {
     const options = {
       center: location,
       zoom: 18,
-      button: "ok",
+      /* disableDefaultUI: false, */
     }
     this.map = new google.maps.Map(this.mapRef.nativeElement, options);
     //Marcador
     var marker = new google.maps.Marker({
-      position: {lat: this.xy.coords.latitude, lng: this.xy.coords.longitude},
+      position: {lat: this.xy.coords.latitude, lng:this.xy.coords.longitude},
       map: this.map,
       title: "Tu ubicacion"
         });
@@ -50,7 +51,7 @@ export class GeoPage  {
   ionViewDidEnter(){
     this.showMap();
   }
-
+// carga funcion al inicio
   ngAfterViewInit(){
     this.geoNative();
   }
